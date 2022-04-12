@@ -7,6 +7,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PastOrPresent;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 public class RevistaDTO {
 
     @NotBlank
@@ -15,6 +17,7 @@ public class RevistaDTO {
 
     @NotNull
     @PastOrPresent
+    @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate dataPublicacao;
 
     public RevistaDTO() {}
