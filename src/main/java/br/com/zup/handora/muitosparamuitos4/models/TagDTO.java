@@ -13,6 +13,10 @@ public class TagDTO {
         this.nome = nome;
     }
 
+    public Tag toModel() {
+        return new Tag(nome);
+    }
+
     public String getNome() {
         return nome;
     }
